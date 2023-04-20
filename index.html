@@ -9,93 +9,52 @@
   </head>
   <body>
     <div class="wrapper">
+      <header>
+        <h1 id="new-business-name">Business Name Goes Here</h1>
+        <p>Business Invoice</p>
+      </header>
       <div class="container">
-        <div id="popup">
-          <!-- javascript render -->
-        </div>
-        <div id="form-box">
-          <!-- HTML rendered by javascript -->
-        </div>
-        <header>
-          <h1>Invoice-It-Up ⬆</h1>
-          <p>Your Business Invoice Creator</p>
-        </header>
-
-        <div id="form-detail-output">
-          <!-- user form inputs RENDERED by javascript-->
+        <!-- user details output -->
+        <div class="user-details-output-container">
+          <!-- rendered by javascript -->
         </div>
 
-        <!-- invoice inputs -->
-        <div class="inner-container">
-          <div class="item-input-box">
-            <input
-              type="text"
-              name="input"
-              id="input-item"
-              class="input-left"
-              placeholder="Enter item"
-            />
-            <select
-              name="currency"
-              id="currency-select-box"
-              class="currency-select"
-            >
-              <option class="currency-value" value="£">£</option>
-              <option class="currency-value" value="$">$</option>
-              <option class="currency-value" value="€">€</option>
+        <!-- user invoice input bar -->
+        <div class="user-input-bar">
+          <div class="user-inner-input-bar">
+            <input class="enter-task" type="text" placeholder="Enter task" />
+            <select class="enter-currency" name="currency" id="currency-select">
+              <option value="£">£</option>
+              <option value="$">$</option>
+              <option value="€">€</option>
             </select>
-            <input
-              type="number"
-              name="input-currency"
-              id="input-currency"
-              class="input-currency"
-              placeholder="Amount"
-            />
-            <input
-              type="number"
-              name="input-quantity"
-              id="input-quantity"
-              class="input-quantity"
-              placeholder="Qty"
-            />
-            <button id="add-inputs-btn" class="add-inputs">+</button>
+            <input type="number" class="enter-cost" placeholder="Enter cost" />
+            <input type="number" class="enter-quantity" placeholder="Qty" />
+            <button class="submit-item-btn" id="submit-item-btn">+</button>
           </div>
+        </div>
+        <!-- user outputs -->
+        <div class="user-outputs">
+          <div class="task-col"></div>
+          <div class="total-col"></div>
+        </div>
+        <!-- total amount output -->
+        <div class="total-outouts">
+          <div class="notes-col"></div>
+          <div class="total-amount-col"></div>
+        </div>
+        <button class="create-invoice-btn">Create Invoice</button>
 
-          <!-- USER INPUT DETAIL RENDERS -->
-          <div class="user-input-el" id="user-input-el">
-            <!-- rendered by javascript -->
-          </div>
+        <!-- BUILD SECTION - TO BE REMOVED -->
 
-          <!-- OUTPUT BOX-->
-          <div class="top-headlines">
-            <h3>Item</h3>
-            <h3>Qty</h3>
-            <h3>Item Cost</h3>
-            <h3>Total</h3>
-          </div>
-          <div id="item-output">
-            <!-- item output rendered by javascript -->
-          </div>
+        <!-- pop up  -->
+        <div id="initial-popup">
+          <!-- rendered via JS (popup.js)-->
+        </div>
 
-          <!-- total summary box -->
-          <div class="total-summary-box">
-            <div class="notes-col">
-              <h3>Notes</h3>
-              <div id="note-output">
-                <!-- rendered by javascript -->
-              </div>
-            </div>
-            <div class="total-amount-col">
-              <h3>Total Amount</h3>
-              <div id="total-output">
-                <!-- rendered by javascript -->
-              </div>
-            </div>
-          </div>
-          <div class="send-invoice-btn" id="send-invoice">
-            <img src="" alt="" />
-            <p>Send invoice</p>
-          </div>
+        <!-- business details -->
+        <div class="main-details-input">
+          <!-- rendered by javascript -->
         </div>
       </div>
     </div>
